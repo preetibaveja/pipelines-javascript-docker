@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: preetibavejapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: preetibavejapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: preetibavejapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: preetibavejapipelinesjavascriptdocker 
+          image: acrtestpreeti.azurecr.io/preetibavejapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
